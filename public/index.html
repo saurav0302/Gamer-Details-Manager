@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamer Details Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .form-container {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .form-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #e0e0e0;
+        }
+
+        .form-container label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-container input,
+        .form-container select,
+        .form-container textarea,
+        .form-container button {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .form-container input,
+        .form-container select,
+        .form-container textarea {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .form-container button {
+            background-color: #6c63ff;
+            color: #fff;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #5750d3;
+        }
+
+        @media (max-width: 600px) {
+            .form-container {
+                padding: 15px;
+            }
+
+            .form-container h1 {
+                font-size: 20px;
+            }
+
+            .form-container input,
+            .form-container select,
+            .form-container textarea,
+            .form-container button {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Gamer Details Form</h1>
+        <form action="/data" method="post" id="gamerForm">
+            <label for="username">Gamer Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your gamer tag" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="favorite-game">Favorite Game</label>
+            <input type="text" id="favorite-game" name="favoriteGame" placeholder="Enter your favorite game" required>
+
+            <label for="platform">Preferred Gaming Platform</label>
+            <select id="platform" name="platform" required>
+                <option value="" disabled selected>Select your platform</option>
+                <option value="PC">PC</option>
+                <option value="Console">Console</option>
+                <option value="Mobile">Mobile</option>
+            </select>
+
+            <label for="skill-level">Skill Level</label>
+            <select id="skill-level" name="skillLevel" required>
+                <option value="" disabled selected>Select your skill level</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Pro">Pro</option>
+            </select>
+
+            <label for="bio">Short Bio</label>
+            <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</html>

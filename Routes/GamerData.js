@@ -18,18 +18,19 @@ router.post('/', async (req, res) => {
 
         // Save the gamer data
         const savedGamer = await data.save();
-
+        return res.redirect('./../welcome.html');
         // Send success response
-        return res.status(201).json({
-            message: "Gamer data saved successfully!",
-            data: savedGamer
-        });
+        // return res.status(201).json({
+        //     message: "Gamer data saved successfully!",
+        //     data: savedGamer
+        // });
     } catch (error) {
         console.error(error);
-        return res.status(500).json({ 
-            message: "An error occurred while saving gamer data.", 
-            error: error.message 
-        });
+        // return res.status(500).json({ 
+        //     message: "An error occurred while saving gamer data.", 
+        //     error: error.message 
+        // });
+        return res.redirect('./../error.html');
     }
 });
 

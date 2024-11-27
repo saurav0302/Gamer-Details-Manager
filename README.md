@@ -1,9 +1,8 @@
-# Gamer-Details-Manager
-## Project Description
+Project Description
+Gamer-Details-Manager is a Node.js application that allows users to store and manage their gamer details. Users can sign in using Google OAuth and submit details such as their gamer tag, favorite game, platform, and skill level. The app uses MongoDB for storage and Express for server-side routing.
 
-The Gamer-Details-Manager project is a Node.js-based application that enables users to store and manage gamer details.
-
-## Features
-
-*   Data Storage: The project utilizes Node.js to store and manage gamer details.
-*   Server-Side Rendering: The application can render the stored data directly on the server-side.
+Features
+Google Sign-In: Sign in with Google to authenticate.
+Data Storage: Store gamer details like username, favorite game, and more.
+Protected Routes: Only authenticated users can submit data.
+Responsive UI: User-friendly design for all devices.
